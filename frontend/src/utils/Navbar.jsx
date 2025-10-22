@@ -1,19 +1,20 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import SubscribeButton from "../utils/subscribe";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "About us", path: "/about" },
-    { name: "About Events", path: "/events" },
-    { name: "Timeline", path: "/timeline" },
-    { name: "FAQS", path: "/faqs" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "About us", path: "#About" },
+    { name: "About Events", path: "#SIGs" },
+    { name: "Timeline", path: "#Schedule" },
+    { name: "FAQS", path: "#FAQs" },
+    { name: "Contact Us", path: "#Contact" },
   ];
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white/95 backdrop-blur-sm fixed top-0 z-50 shadow-md">
+    <nav className="w-full font-grotesk border-b border-gray-200 bg-white/95 backdrop-blur-sm fixed top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-12 py-4">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -45,9 +46,7 @@ export default function Navbar() {
 
         {/* Desktop Button */}
         <div className="hidden lg:block">
-          <button className="px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base md:text-lg">
-            Request a quote
-          </button>
+          <SubscribeButton styleprop="px-8 py-3 font-grotesk border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base md:text-lg" content="Get Notified" />
         </div>
 
         {/* Mobile Toggle */}
@@ -75,9 +74,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-5">
-              <button className="w-full px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base">
-                Request a quote
-              </button>
+              <SubscribeButton styleprop="w-full px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 font-semibold text-base" content="Get Notified" />
             </div>
           </div>
         </div>
