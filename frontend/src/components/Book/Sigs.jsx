@@ -10,7 +10,7 @@ import cyber from "../../../public/cyber.jpg"
 import nontech from "../../../public/nontech.jpg"
 import development from "../../../public/development.jpg"
 import robotics from "../../../public/robotics.jpg"
-import bgImage from "../../../public/page.svg"
+
 import cover from "../../../public/cover.svg"
 // A reusable Page component for the main content.
 const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) => {
