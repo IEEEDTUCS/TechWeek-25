@@ -6,7 +6,7 @@ import ML from "../../../public/ML.jpg"
 import design from "../../../public/design.jpg"
 import CP from "../../../public/CP.jpg"
 import electronics from "../../../public/electronics.jpg"
-import genAI from "../../../public/genAI.jpg"
+import cyber from "../../../public/cyber.jpg"
 import nontech from "../../../public/nontech.jpg"
 import development from "../../../public/development.jpg"
 import robotics from "../../../public/robotics.jpg"
@@ -165,15 +165,21 @@ export default function Sigs() {
   }, [hasFlippedOnce]);
 
   const sigsData = [
-    { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:ML },
-    { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: dsa },
-    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl: development },
-    { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: robotics },
-     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl: nontech },
+     { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: dsa },
+     { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: robotics },
+   
+       
+        { sigName: "Cyber", description: "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.", imageUrl: cyber },
+
       { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: CP },
-       { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:electronics },
-        { sigName: "Generative AI", description: "AI techniques that create new content like text, images, or music", imageUrl: genAI },
+      { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:electronics },
+
+    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl: development },
+     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl: nontech },
+     
+     
          { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:design },
+           { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:ML },
   ];
 
   return (
@@ -223,6 +229,7 @@ export default function Sigs() {
             </HTMLFlipBook>
           )}
         </div>
+        
       </div></>
   );
 }
