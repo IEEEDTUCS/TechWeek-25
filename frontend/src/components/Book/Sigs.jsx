@@ -13,7 +13,7 @@ import robotics from "../../../public/robotics.jpg"
 
 import cover from "../../../public/cover.svg"
 // A reusable Page component for the main content.
-const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) => {
+const Page = React.forwardRef(({ sigName, description, imageUrl, style,whatsappLink }, ref) => {
   return (
     <div className="page p-6 shadow-inner flex flex-col h-full overflow-hidden  bg-contain bg-no-repeat bg-center" ref={ref} style={{...style,  backgroundImage: "url('/page.svg')",
   backgroundSize: "cover",
@@ -49,9 +49,23 @@ const Page = React.forwardRef(({ sigName, description, imageUrl, style }, ref) =
 
       {/* Bottom section: Buttons (Pushed to the bottom by the flex-grow above) */}
       <div className="pt-6 flex flex-col gap-3">
-        <button className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition-colors">
-          Join Group
-        </button>
+        {whatsappLink ? (
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-[#B9FF66] text-gray-900 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-lime-400 transition-colors text-center"
+          >
+            Join Group
+          </a>
+        ) : (
+          <button
+            disabled
+            className="w-full bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded-lg"
+          >
+            Join Group
+          </button>
+        )}
         <button className="w-full bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors">
           Get Notified
         </button>
@@ -165,35 +179,36 @@ export default function Sigs() {
   }, [hasFlippedOnce]);
 
   const sigsData = [
-     { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl: dsa },
-     { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: robotics },
-   
-       
-        { sigName: "Cyber", description: "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.", imageUrl: cyber },
+     { sigName: "DSA", description: "Organizing data efficiently and designing step-by-step computational solutions.", imageUrl:dsa,whatsappLink:"https://chat.whatsapp.com/D2fL9SU91zxBN139wzyolh?mode=wwt" },
+     { sigName: "Robotics", description: "Designing and programming machines that can perform automated tasks.", imageUrl: robotics, whatsappLink:" https://chat.whatsapp.com/DhKtgiE9Qct3yKzthk5YsC?mode=wwt  " },
 
-      { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl: CP },
-      { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:electronics },
+        { sigName: "Cyber", description: "Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.", imageUrl: cyber, whatsappLink:"https://chat.whatsapp.com/DaQCYCAYoxQH8neIu6wnPX?mode=wwt  " },
 
-    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl: development },
-     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl: nontech },
-     
-     
-         { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:design },
-           { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:ML },
-  ];
+      { sigName: "Into to Competitive Programming", description: "Solving algorithmic and coding problems efficiently under time constraints.", imageUrl:CP, whatsappLink:"https://chat.whatsapp.com/GSeroYsJ49X9ne9XL38kNR?mode=wwt  " },
+      { sigName: "Electronics and Embedded Systems", description: "Building and programming circuits and small computing devices.", imageUrl:electronics, whatsappLink:"https://chat.whatsapp.com/EC5aSWlzQtYHxME7dWNEPx?mode=wwt "},
+
+    { sigName: "Development and DevOps", description: "Creating software applications and managing their deployment and maintenance..", imageUrl:development, whatsappLink:"https://chat.whatsapp.com/G3nMzUtiGonCImFYwEmDAV?mode=wwt  "},
+     { sigName: "Analytics and management ", description: "Studying data to make informed business or technical decisions..", imageUrl:nontech , whatsappLink:"https://chat.whatsapp.com/FX41h7GNM2V17szvuk2hpS?mode=wwt " },
+
+
+         { sigName: "Design", description: "Crafting visual and interactive elements for usability and aesthetics.", imageUrl:design , whatsappLink:" https://chat.whatsapp.com/KOZgHe5kOgeAJvhspcOWSa?mode=wwt  "},
+           { sigName: "Machine Learning", description: "A branch of AI where systems learn patterns from data to make predictions or decisions.", imageUrl:ML, whatsappLink:"https://chat.whatsapp.com/BxMtAk6EsMTGhI6iw6FlvM?mode=wwt " },
+];
 
   return (
     <><div className="max-w-6xl mx-auto font-grotesk">
       {/* Header */}
-      <div className="mb-8 sm:mb-12">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 mb-4">
-          <span className="inline-block bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl mb-3 sm:mb-0 w-fit">
-            About SIGs
-          </span>
-          <p className="text-[#191A23] text-sm sm:text-base">
-            A week packed with friendly, hands-on workshops on AI, ML, DSA,
-            Design, and more. No prerequisites, just curiosity!
-          </p>
+      <div className="max-w-6xl mx-auto font-grotesk">
+        <div className=" sm:mb-12 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <span className="inline-block mb-5 bg-[#B9FF66] text-[#191A23] font-bold px-6 py-3 rounded-md text-2xl sm:text-3xl sm:mb-0 w-fit">
+              About SIGs
+            </span>
+            <p className="text-[#191A23] text-sm sm:text-base">
+              Explore diverse tech domains like ML, Web Dev, DSA, AI with
+              practical demonstrations and hands-on experience.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -2,12 +2,48 @@ import React, { useState } from 'react';
 import './FAQs.css';                        
 
 const faqData = [
-  { q: "What is TechWeek?", a: "TechWeek is an IEEE event that celebrates technology and innovation." },
-  { q: "How can I participate?", a: "You can register through our website and join various events and workshops." },
-  { q: "Who can attend?", a: "All students interested in tech, coding, or innovation can attend!" },
-   { q: "What is TechWeek?", a: "TechWeek is an IEEE event that celebrates technology and innovation." },
-  { q: "How can I participate?", a: "You can register through our website and join various events and workshops." },
-  { q: "Who can attend?", a: "All students interested in tech, coding, or innovation can attend!" },
+  { q: "What is TechWeek 2025?", a: "TechWeek 2025 is IEEE DTU’s annual weekly event packed with beginner-friendly workshops and hands-on sessions celebrating technology, innovation, and creativity." },
+  { q: "How do I register for TechWeek?", a: (
+      <>
+        You can register through <a href="https://techweek.ieeedtu.in" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>techweek.ieeedtu.in</a>, 
+        and event-specific registration links will also be shared on Instagram (<a href="https://instagram.com/ieee.dtu" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>@ieee.dtu</a>) and other IEEE DTU social media platforms.
+      </>
+    ) },
+  { q: " Is there any registration fee?", a: "All TechWeek events are free of cost." },
+   { q: "Can non-IEEE members attend these sessions?", a: "Yes! TechWeek 2025 is open to all students, whether or not they are IEEE members. Everyone is welcome to register for the workshop, come and learn." },
+  { q: "What type of workshops will be there in TechWeek 2025?", a: "Workshops will cover a wide range of exciting topics, including Hardware, Robotics, Artificial Intelligence, Machine Learning, Web Development, Cybersecurity, Design Thinking, and much more." },
+  { q: "Are there any prerequisites required to attend the TechWeek sessions?", a: "Not at all ! All sessions are beginner-friendly, designed to introduce new domains and help students explore their technical interests." },
+  { q: "Will we receive participation certificates?", a: "Yes, all participants will receive certificates of participation, and winners of various events will get special prizes." },
+  { 
+  q: "From where can I know about the updates for TechWeek 2025?", 
+  a: (
+    <>
+    You can stay updated about TechWeek 2025 by clicking the Get Notified button on the website. 
+Also follow IEEE DTU on{" "}
+<a
+  href="https://instagram.com/ieee.dtu"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ color: "blue" }}
+>
+  @ieee.dtu
+</a>{" "}
+and visit{" "}
+<a
+  href="https://techweek.ieeedtu.in"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ color: "blue" }}
+>
+  techweek.ieeedtu.in
+</a>{" "}
+for updates on DSA, Dev, ML, Electronics, and more.
+
+    </>
+    )
+  }
+,
+  
   
 ];
 
